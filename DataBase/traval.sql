@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80000
 File Encoding         : 65001
 
-Date: 2017-06-25 14:07:21
+Date: 2017-06-25 21:04:06
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -55,6 +55,46 @@ CREATE TABLE `history` (
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for `line`
+-- ----------------------------
+DROP TABLE IF EXISTS `line`;
+CREATE TABLE `line` (
+  `spotid1` varchar(20) NOT NULL,
+  `spotid2` varchar(20) NOT NULL,
+  `where` varchar(20) NOT NULL,
+  PRIMARY KEY (`spotid1`,`spotid2`,`where`),
+  KEY `spotid2` (`spotid2`),
+  KEY `where` (`where`),
+  CONSTRAINT `line_ibfk_1` FOREIGN KEY (`spotid1`) REFERENCES `spot` (`point`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `line_ibfk_2` FOREIGN KEY (`spotid2`) REFERENCES `spot` (`point`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `line_ibfk_3` FOREIGN KEY (`where`) REFERENCES `spot` (`sceneid`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of line
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `photograph`
+-- ----------------------------
+DROP TABLE IF EXISTS `photograph`;
+CREATE TABLE `photograph` (
+  `graphid` varchar(20) NOT NULL,
+  `name` char(20) DEFAULT NULL,
+  `changetime` char(20) DEFAULT NULL,
+  `uploadtime` char(20) NOT NULL,
+  `author` int(10) NOT NULL,
+  `state` text NOT NULL,
+  PRIMARY KEY (`graphid`),
+  KEY `author` (`author`),
+  CONSTRAINT `photograph_ibfk_1` FOREIGN KEY (`author`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of photograph
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for `scene`
 -- ----------------------------
 DROP TABLE IF EXISTS `scene`;
@@ -93,6 +133,32 @@ CREATE TABLE `spot` (
 
 -- ----------------------------
 -- Records of spot
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `text`
+-- ----------------------------
+DROP TABLE IF EXISTS `text`;
+CREATE TABLE `text` (
+  `textID` int(10) NOT NULL,
+  `content` text NOT NULL,
+  `uploadtime` char(20) NOT NULL,
+  `changetime` char(20) DEFAULT NULL,
+  `name` char(40) DEFAULT NULL,
+  `where` char(20) NOT NULL,
+  `auhor` int(10) NOT NULL,
+  `changer` int(10) DEFAULT NULL,
+  PRIMARY KEY (`textID`),
+  KEY `where` (`where`),
+  KEY `auhor` (`auhor`),
+  KEY `changer` (`changer`),
+  CONSTRAINT `text_ibfk_1` FOREIGN KEY (`where`) REFERENCES `spot` (`sceneid`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `text_ibfk_2` FOREIGN KEY (`auhor`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `text_ibfk_3` FOREIGN KEY (`changer`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of text
 -- ----------------------------
 
 -- ----------------------------
