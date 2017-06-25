@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80000
 File Encoding         : 65001
 
-Date: 2017-06-24 19:02:58
+Date: 2017-06-25 14:07:21
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -105,11 +105,12 @@ CREATE TABLE `user` (
   `nickname` varchar(10) DEFAULT NULL,
   `realname` varchar(10) NOT NULL,
   `point` int(5) NOT NULL,
+  `passwar` varchar(15) NOT NULL,
   PRIMARY KEY (`userID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', '2102811', 'a', 'A', '0');
-INSERT INTO `user` VALUES ('2', '210281199612030817', 'b', 'B', '0');
+INSERT INTO `user` VALUES ('1', '2102811', 'a', 'A', '0', '');
+INSERT INTO `user` VALUES ('2', '210281199612030817', 'b', 'B', '0', '');
