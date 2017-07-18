@@ -1,5 +1,3 @@
-<!DOCTYPE travel [
-
 <!ELEMENT travel (head,body)>
 <!ELEMENT head (title,titleImg,date,author)>
 <!ATTLIST titleImg src CDATA #REQUIRED>
@@ -8,6 +6,4 @@
 <!ELEMENT text #PCDATA>
 <!ELEMENT photo #PCDATA>
 <!ATTLIST photo src CDATA #REQUIRED>
-<!ATTLIST photo index CDATA #REQUIRED>
 
-]>
