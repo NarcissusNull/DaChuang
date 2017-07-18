@@ -1,9 +1,13 @@
 <!ELEMENT travel (head,body)>
 <!ELEMENT head (title,titleImg,date,author)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT titleImg (#PCDATA)>
 <!ATTLIST titleImg src CDATA #REQUIRED>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+
 <!ELEMENT body (node*)>
 <!ELEMENT node (text|photo)>
-<!ELEMENT text #PCDATA>
-<!ELEMENT photo #PCDATA>
+<!ELEMENT text (#PCDATA)>
+<!ELEMENT photo (#PCDATA)>
 <!ATTLIST photo src CDATA #REQUIRED>
-
