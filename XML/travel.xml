@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE travel SYSTEM "travel.dtd">
+<travel>
+	<head>
+		<title>
+			游记演示
+		</title>	
+		<titleImg src="yashi.jpg">
+			titleImg	
+		</titleImg>
+		<date>
+			2016年8月28日 | 260天 | 88图	
+		</date>
+		<author>
+			演示
+		</author>
+	</head>
+	<body>
+		<node>
+			<text>
+				游记文本片段1
+			</text>
+		</node>
+		<node>
+			<photo src="youjitupian1.jpg" index="1">
+				photo-1
+			</photo>
+		</node>
+		<node>
+			<photo src="youjitupian2.jpg" index="2">
+				photo-2	
+			</photo>
+			<text>
+				游记文本片段2
+			</text>
+		</node>
+	</body>
+</travel>
