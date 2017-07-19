@@ -1,13 +1,11 @@
-<!DOCTYPE travel [
-
 <!ELEMENT travel (head,body)>
 <!ELEMENT head (title,titleImg,date,author)>
-<!ATTLIST titleImg src CDATA #REQUIRED>
-<!ELEMENT body (node*)>
-<!ELEMENT node (text|photo)>
-<!ELEMENT text #PCDATA>
-<!ELEMENT photo #PCDATA>
-<!ATTLIST photo src CDATA #REQUIRED>
-<!ATTLIST photo index CDATA #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT titleImg (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
 
-]>
+<!ELEMENT body (node*)>
+<!ELEMENT node (text+|photo+)>
+<!ELEMENT text (#PCDATA)>
+<!ELEMENT photo (#PCDATA)>

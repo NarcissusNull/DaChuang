@@ -5,8 +5,8 @@
 		<title>
 			游记演示
 		</title>	
-		<titleImg src="yashi.jpg">
-			titleImg	
+		<titleImg >
+			yashi.jpg
 		</titleImg>
 		<date>
 			2016年8月28日 | 260天 | 88图	
@@ -22,13 +22,13 @@
 			</text>
 		</node>
 		<node>
-			<photo src="youjitupian1.jpg" index="1">
-				photo-1
-			</photo>
+			<photo>
+				youjitupian1.jpg
+			</photo
 		</node>
 		<node>
-			<photo src="youjitupian2.jpg" index="2">
-				photo-2	
+			<photo>
+				youjirupian2.jpg
 			</photo>
 			<text>
 				游记文本片段2

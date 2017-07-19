@@ -88,16 +88,13 @@ public class Main {
 
                     elements = document.select("body");
                     element = elements.get(0);
-                    if(element.attr("id")!="trips-show"){
+                    //获取body标签
+                    if(!match(element.attr("id"),"trips-show")){
                         continue;
                     }
-                    elements = element.select("div");
-                    element = elements.get(0);
-                    elements = element.select("div");
-                    element = elements.get(2);
-                    elements = element.select("div");
-                    element = elements.get(0);
-                    elements = element.select("h1");
+                    //判断是否为私密游记
+
+                    elements = element.select(".trip-title");
                     element = elements.get(0);
                     title = element.text();
                     System.out.println(title);
@@ -111,8 +108,10 @@ public class Main {
 
                     elements = document.select(".trip-body");
                     element = elements.get(0);
+                    //获取游记的主体
                     elements = element.select("div");
                     for(int j = 0;j < elements.size();j++){
+                        //处理所有主体的div
 
                     }
 

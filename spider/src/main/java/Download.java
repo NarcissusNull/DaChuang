@@ -3,6 +3,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
+ * 下载图片
  * Created by Narcissus on 2017/6/25.
  */
 public class Download {
