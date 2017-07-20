@@ -10,9 +10,13 @@ Target Server Type    : MYSQL
 Target Server Version : 80000
 File Encoding         : 65001
 
-Date: 2017-06-25 21:04:06
+Date: 2017-07-20 20:03:47
 */
-
+create database Travals;
+use Travals;
+/*
+创建Traval数据库并装而使用Traval数据库
+*/
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
@@ -20,18 +24,18 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `friend`;
 CREATE TABLE `friend` (
-  `user` int(20) NOT NULL,
-  `friend` int(20) NOT NULL,
-  PRIMARY KEY (`user`,`friend`),
-  KEY `friendslate` (`friend`),
-  CONSTRAINT `friendslate` FOREIGN KEY (`friend`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `userlate` FOREIGN KEY (`user`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE
+  `userid` int(10) NOT NULL,
+  `identyid` char(18) DEFAULT NULL,
+  `friendsid` int(10) NOT NULL,
+  PRIMARY KEY (`userid`,`friendsid`),
+  KEY `friendsid` (`friendsid`),
+  CONSTRAINT `friend_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `friend_ibfk_2` FOREIGN KEY (`friendsid`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of friend
 -- ----------------------------
-INSERT INTO `friend` VALUES ('1', '2');
 
 -- ----------------------------
 -- Table structure for `history`
@@ -75,23 +79,29 @@ CREATE TABLE `line` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `photograph`
+-- Table structure for `notes`
 -- ----------------------------
-DROP TABLE IF EXISTS `photograph`;
-CREATE TABLE `photograph` (
-  `graphid` varchar(20) NOT NULL,
-  `name` char(20) DEFAULT NULL,
-  `changetime` char(20) DEFAULT NULL,
+DROP TABLE IF EXISTS `notes`;
+CREATE TABLE `notes` (
+  `textID` int(10) NOT NULL,
+  `content` text NOT NULL,
+  `comment` text,
   `uploadtime` char(20) NOT NULL,
-  `author` int(10) NOT NULL,
-  `state` text NOT NULL,
-  PRIMARY KEY (`graphid`),
-  KEY `author` (`author`),
-  CONSTRAINT `photograph_ibfk_1` FOREIGN KEY (`author`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE
+  `changetime` char(20) DEFAULT NULL,
+  `name` char(40) DEFAULT NULL,
+  `auhor` int(10) NOT NULL,
+  `where` char(20) NOT NULL,
+  `changer` text,
+  PRIMARY KEY (`textID`),
+  KEY `where` (`where`),
+  KEY `auhor` (`auhor`),
+  KEY `changer` (`changer`(4)),
+  CONSTRAINT `notes_ibfk_1` FOREIGN KEY (`where`) REFERENCES `spot` (`sceneid`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `notes_ibfk_2` FOREIGN KEY (`auhor`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of photograph
+-- Records of notes
 -- ----------------------------
 
 -- ----------------------------
@@ -136,32 +146,6 @@ CREATE TABLE `spot` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `text`
--- ----------------------------
-DROP TABLE IF EXISTS `text`;
-CREATE TABLE `text` (
-  `textID` int(10) NOT NULL,
-  `content` text NOT NULL,
-  `uploadtime` char(20) NOT NULL,
-  `changetime` char(20) DEFAULT NULL,
-  `name` char(40) DEFAULT NULL,
-  `where` char(20) NOT NULL,
-  `auhor` int(10) NOT NULL,
-  `changer` int(10) DEFAULT NULL,
-  PRIMARY KEY (`textID`),
-  KEY `where` (`where`),
-  KEY `auhor` (`auhor`),
-  KEY `changer` (`changer`),
-  CONSTRAINT `text_ibfk_1` FOREIGN KEY (`where`) REFERENCES `spot` (`sceneid`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `text_ibfk_2` FOREIGN KEY (`auhor`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `text_ibfk_3` FOREIGN KEY (`changer`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of text
--- ----------------------------
-
--- ----------------------------
 -- Table structure for `user`
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
@@ -171,12 +155,12 @@ CREATE TABLE `user` (
   `nickname` varchar(10) DEFAULT NULL,
   `realname` varchar(10) NOT NULL,
   `point` int(5) NOT NULL,
-  `passwar` varchar(15) NOT NULL,
+  `password` varchar(15) NOT NULL,
   PRIMARY KEY (`userID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', '2102811', 'a', 'A', '0', '');
+INSERT INTO `user` VALUES ('1', '21028119612030917', 'a', 'A', '0', '');
 INSERT INTO `user` VALUES ('2', '210281199612030817', 'b', 'B', '0', '');
