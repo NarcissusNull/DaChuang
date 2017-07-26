@@ -4,19 +4,16 @@ Navicat MySQL Data Transfer
 Source Server         : localhost_3306
 Source Server Version : 80000
 Source Host           : localhost:3306
-Source Database       : traval
+Source Database       : travals
 
 Target Server Type    : MYSQL
 Target Server Version : 80000
 File Encoding         : 65001
 
-Date: 2017-07-20 20:03:47
+Date: 2017-07-25 08:47:56
 */
-create database Travals;
-use Travals;
-/*
-创建Traval数据库并装而使用Traval数据库
-*/
+create database travals;
+use travals;
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
@@ -155,6 +152,8 @@ CREATE TABLE `user` (
   `nickname` varchar(10) DEFAULT NULL,
   `realname` varchar(10) NOT NULL,
   `point` int(5) NOT NULL,
+  `QQ` char(20) DEFAULT NULL,
+  `phone` char(11) DEFAULT NULL,
   `password` varchar(15) NOT NULL,
   PRIMARY KEY (`userID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -162,5 +161,5 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', '21028119612030917', 'a', 'A', '0', '');
-INSERT INTO `user` VALUES ('2', '210281199612030817', 'b', 'B', '0', '');
+INSERT INTO `user` VALUES ('1', '21028119612030917', 'a', 'A', '0', null, null, '');
+INSERT INTO `user` VALUES ('2', '210281199612030817', 'b', 'B', '0', null, null, '');
