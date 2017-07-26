@@ -18,56 +18,20 @@ import java.util.*;
  */
 public class Main {
     public static void main(String[] args){
-        Queue<String> URLlist  = new LinkedList<String>();
-        //存储待遍历的URL
-        //广度优先遍历
-        Set<String> visitedURL = new HashSet<String>();
-        //存储已经遍历的URL\
-        Document document;
-        //存储heml文件的类Document,实际上可以理解为字符串
-        Element element;
-        //存储一个标签的类，实际上也是字符串，可以理解为截取Document类的一部分字符串
-        Elements elements;
-        //存储多个标签，实际上就是Element的数组
-        String href;
+
+
         String title;
         String date;
         String titleImage;
         String downloadImage;
-        //以上变量用来读取和保存要爬取的信息
+        //以上变量用来读取和要爬取的信息
         File file;
         Download download;
+        String titleImageURL;
         //以上变量用来下载图片
         int sum = 0;
 
-        URLlist.offer("http://chanyouji.com/");
 
-        while(!URLlist.isEmpty()){
-            try {
-                String url = URLlist.poll();
-                //出队列
-                if(visitedURL.contains(url)){
-                    //判断是否已经遍历过
-                    continue;
-                }
-                System.out.println(url);
-                visitedURL.add(url);
-                //网址入队列，表示已经遍历
-                document = Jsoup.connect(url).timeout(5000).get();
-                //连接网址，获取网页（源代码）
-                elements = document.select("a");
-                //挑选出所有a标签
-                for(int i = 0;i < elements.size();i++){
-                    //遍历所有标签，判断其中的href参数是否为要求的网址
-                    element = elements.get(i);
-                    href = element.attr("href");
-                    if(match("^/.*",href)){
-                        //采用正则表达式判断href
-                        URLlist.offer("http://chanyouji.com"+href);
-                        //入队列，等待爬取
-                    }
-                }
-                if(match("^http://chanyouji.com/trips/.*[0-9]*",url)){
                     //如果网址是单个游记的网址，进行爬取
                     sum++;
                     System.out.println(sum);
@@ -106,6 +70,17 @@ public class Main {
                     System.out.println(date);
                     //获取游记的时间
 
+                    elements = document.select(".trip-header");
+                    element = elements.get(0);
+                    elements = element.select("img");
+                    element = elements.get(0);
+                    titleImageURL = element.attr("src");
+                    titleImageURL = titleImageURL.substring(0,titleImageURL.lastIndexOf("-"));
+                    System.out.println(titleImageURL);
+                    titleImage = titleImageURL.substring(titleImageURL.lastIndexOf("/")+1,titleImageURL.length());
+                    System.out.println(titleImage);
+                    //获取title的背景图片
+
                     elements = document.select(".trip-body");
                     element = elements.get(0);
                     //获取游记的主体
@@ -115,14 +90,10 @@ public class Main {
 
                     }
 
-//                    elements = document.select(".ctd_cover");
-//                    element = elements.get(0);
-//                    titleImage = element.attr("src");
-//                    //获取title的背景图片
-//
-//                    file = new File("E:/DaChuang/"+title);
+
+//                    file = new File("E:/DaChuang/"+titleImage.substring(0,titleImage.lastIndexOf("/")).substring(0,titleImage.lastIndexOf("/")));
 //                    file.mkdirs();
-//                    downloadImage = "E:/DaChuang/"+title+"/title.jpg";
+//                    downloadImage = "E:/DaChuang/"+title+titleImage.substring(titleImage.lastIndexOf("/"),titleImage.length());
 //                    download = new Download(titleImage,downloadImage);
 //                    download.download();
 //                    //下载title的背景图片
@@ -148,13 +119,10 @@ public class Main {
 //                        }
 //                    }
                 }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
 
-    private static boolean match(String regex, String str) {
+        }
+
+    public static boolean match(String regex, String str) {
         //字符串匹配
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(str);

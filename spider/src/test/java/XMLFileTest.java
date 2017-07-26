@@ -5,9 +5,9 @@ import java.io.FileNotFoundException;
  */
 public class XMLFileTest {
     public static void main(String[] args) throws FileNotFoundException {
-        XMLFile xmlFile = new XMLFile("1","1","1","1","1");
-        xmlFile.addNode("text","sdlfjsljflskdfl");
-        xmlFile.addNode("text","ssdafd","photo","skfajlsjflkaj");
-        xmlFile.createXMLFile();
+        XMLFileHandle xmlFileHandle = new XMLFileHandle("1","1","1","1","1");
+        xmlFileHandle.addNode("text","sdlfjsljflskdfl");
+        xmlFileHandle.addNode("text","ssdafd","photo","skfajlsjflkaj");
+        xmlFileHandle.createXMLFile();
     }
 }
