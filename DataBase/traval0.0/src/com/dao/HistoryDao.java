@@ -15,9 +15,10 @@ import static com.vo.History.userid;
 
 /**
  * Created by 13190 on 2017/8/3.
+ * 这个程序不太完善，因为外键的关系，所以添加方式需要
  */
 public class HistoryDao {
-    public List<History> selectall() throws SQLException {
+    public static List<History> selectall() throws SQLException {
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
@@ -25,7 +26,7 @@ public class HistoryDao {
         try{//主体部分
             conn = DBAconnect.getConnection();
             if (conn != null) {
-                String sql = "select * from friend";//sql语句进行
+                String sql = "select * from history";//sql语句进行
                 pstmt = conn.prepareStatement(sql);//编译预处理
                 rs = pstmt.executeQuery();//sql执行
 
@@ -47,9 +48,10 @@ public class HistoryDao {
             pstmt.close();
             conn.close();
         }
+       // System.out.print("运行成功");
         return list;
     }
-    public List<History> select(String option) throws SQLException {
+    public static List<History> select(String option) throws SQLException {
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
@@ -77,7 +79,7 @@ public class HistoryDao {
         }
         return list;
     }
-    public List<History> select(String option,String condition,String where) throws SQLException {
+    public static List<History> select(String option,String condition,String where) throws SQLException {
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
@@ -109,14 +111,14 @@ public class HistoryDao {
         return list;
     }
 
-    public void deluserid(int userid) throws SQLException{
+    public static void deluserid(int userid) throws SQLException{
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         try {
             conn=DBAconnect.getConnection();
             if(conn!=null){
-                String sql="delete  from history where userid=?";
+                String sql="delete  from History where userid=?";
                 pstmt=conn.prepareStatement(sql);
                 pstmt = conn.prepareStatement(sql);//编译预处理
                 rs= pstmt.executeQuery();
@@ -133,14 +135,14 @@ public class HistoryDao {
             conn.close();
         }
     }
-    public void delrecentspot(String recentspot) throws SQLException{
+    public static void delrecentspot(String recentspot) throws SQLException{
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         try {
             conn=DBAconnect.getConnection();
             if(conn!=null){
-                String sql="delete from history where recentspot=?";
+                String sql="delete from History where recentspot=?";
                 pstmt=conn.prepareStatement(sql);
                 pstmt = conn.prepareStatement(sql);//编译预处理
                 rs= pstmt.executeQuery();
@@ -157,14 +159,14 @@ public class HistoryDao {
             conn.close();
         }
     }
-    public void delrecentscene(String recentscene) throws SQLException{
+    public static  void delrecentscene(String recentscene) throws SQLException{
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         try {
             conn=DBAconnect.getConnection();
             if(conn!=null){
-                String sql="delete from history where recentscene=?";
+                String sql="delete from History where recentscene=?";
                 pstmt=conn.prepareStatement(sql);
                 pstmt = conn.prepareStatement(sql);//编译预处理
                 rs= pstmt.executeQuery();
@@ -188,7 +190,7 @@ public class HistoryDao {
         try{
             conn=DBAconnect.getConnection();
             if(conn!=null){
-                String sql="update history set recentspot=? where userid=?";
+                String sql="update History set recentspot=? where userid=?";
                 conn.prepareStatement(sql);
                 pstmt.setString(1,recentspot);
                 pstmt.setInt(2,userid);
@@ -204,14 +206,14 @@ public class HistoryDao {
         }
     }
 
-    public void updatetime(String time,int userid)throws SQLException{
+    public static void updatetime(String time,int userid)throws SQLException{
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         try{
             conn=DBAconnect.getConnection();
             if(conn!=null){
-                String sql="update history set time=? where userid=?";
+                String sql="update History set time=? where userid=?";
                 conn.prepareStatement(sql);
                 pstmt.setString(1,time);
                 pstmt.setInt(2,userid);
@@ -226,14 +228,15 @@ public class HistoryDao {
             conn.close();
         }
     }
-public void updateall(String recentspot,String recentscene,String time,int userid) throws SQLException{
+public static void updateall(String recentspot,String recentscene,String time,int userid) throws SQLException{
+        //注意这里的recentspot,recentscen设立外键，必须从scen,spot表中获得
     Connection conn = null;
     PreparedStatement pstmt = null;
     ResultSet rs = null;
         try{
         conn=DBAconnect.getConnection();
         if(conn!=null){
-            String sql="update history set recentspot=?,recentscenen=? time=? where userid=?";
+            String sql="update History set recentspot=?,recentscenen=? time=? where userid=?";
             conn.prepareStatement(sql);
             pstmt.setString(1,recentspot);
             pstmt.setString(2,recentscene);

@@ -3,6 +3,7 @@ package com.dao;
 /**
  * Created by 13190 on 2017/8/3.
  * 用于用户表的运作
+ * 同样跟history一样问题，外键
  */
 
 import com.connect.DBAconnect;
@@ -15,7 +16,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 public class FriendDao {//搜寻所有表内信息
-    public List<Friend> selectall() throws SQLException {
+    public static List<Friend> selectall() throws SQLException {
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
@@ -78,7 +79,7 @@ public List<Friend> select(String option) throws SQLException{
     }
     return list;
   }
-  public List<Friend> select(String option,String condition,String where) throws SQLException{
+  public static List<Friend> select(String option,String condition,String where) throws SQLException{
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
@@ -111,7 +112,7 @@ public List<Friend> select(String option) throws SQLException{
         return list;
     }
 
-    public void deluserid(int userid) throws Exception{
+    public static void deluserid(int userid) throws Exception{
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
@@ -157,7 +158,7 @@ public List<Friend> select(String option) throws SQLException{
             conn.close();
         }
     }
-    public void delfriendsid(int friendsid) throws Exception{
+    public static void delfriendsid(int friendsid) throws Exception{
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
@@ -180,7 +181,7 @@ public List<Friend> select(String option) throws SQLException{
             conn.close();
         }
     }
-    public void updateidentyid (String identyid,int userid)throws Exception{
+    public static void updateidentyid (String identyid,int userid)throws Exception{
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
@@ -220,7 +221,7 @@ public List<Friend> select(String option) throws SQLException{
             conn.close();
         }
     }
-    public void updateall(int userid,String identyid,int friendsid)throws Exception{//更新全部表格
+    public static void updateall(int userid,String identyid,int friendsid)throws Exception{//更新全部表格
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;

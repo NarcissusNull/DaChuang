@@ -9,7 +9,7 @@ import java.sql.SQLException;
  */
 public class DBAconnect {
     private final static String driver="com.mysql.jdbc.Driver";  //URL指向要访问的数据库名mydata
-    private final static String url="jdbc:mysql://localhost:3306/traval?useUnicodLle=true&characterEncoding=utf-8";
+    private final static String url="jdbc:mysql://localhost:3306/travals?useUnicodLle=true&characterEncoding=utf-8";
     private final static String name="root"; //MySQL配置时的用户名
     private final static String pwd="625676";//MySQL配置时的密码
     public static Connection getConnection()

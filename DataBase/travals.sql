@@ -4,13 +4,13 @@ Navicat MySQL Data Transfer
 Source Server         : localhost_3306
 Source Server Version : 80000
 Source Host           : localhost:3306
-Source Database       : travals
+Source Database       : traval
 
 Target Server Type    : MYSQL
 Target Server Version : 80000
 File Encoding         : 65001
 
-Date: 2017-07-25 08:47:56
+Date: 2017-08-09 15:04:42
 */
 create database travals;
 use travals;
@@ -33,6 +33,7 @@ CREATE TABLE `friend` (
 -- ----------------------------
 -- Records of friend
 -- ----------------------------
+INSERT INTO `friend` VALUES ('1', '2.13e236', '2');
 
 -- ----------------------------
 -- Table structure for `history`
@@ -47,7 +48,7 @@ CREATE TABLE `history` (
   KEY `recentspot` (`recentspot`),
   KEY `recentscene` (`recentscene`),
   CONSTRAINT `history_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `history_ibfk_2` FOREIGN KEY (`recentspot`) REFERENCES `spot` (`point`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `history_ibfk_2` FOREIGN KEY (`recentspot`) REFERENCES `spot` (`spotname`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `history_ibfk_3` FOREIGN KEY (`recentscene`) REFERENCES `scene` (`sceneid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -66,8 +67,8 @@ CREATE TABLE `line` (
   PRIMARY KEY (`spotid1`,`spotid2`,`where`),
   KEY `spotid2` (`spotid2`),
   KEY `where` (`where`),
-  CONSTRAINT `line_ibfk_1` FOREIGN KEY (`spotid1`) REFERENCES `spot` (`point`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `line_ibfk_2` FOREIGN KEY (`spotid2`) REFERENCES `spot` (`point`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `line_ibfk_1` FOREIGN KEY (`spotid1`) REFERENCES `spot` (`spotname`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `line_ibfk_2` FOREIGN KEY (`spotid2`) REFERENCES `spot` (`spotname`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `line_ibfk_3` FOREIGN KEY (`where`) REFERENCES `spot` (`sceneid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -123,7 +124,7 @@ CREATE TABLE `scene` (
 -- ----------------------------
 DROP TABLE IF EXISTS `spot`;
 CREATE TABLE `spot` (
-  `point` varchar(20) NOT NULL,
+  `point` int(10) NOT NULL,
   `sceneid` varchar(20) NOT NULL,
   `spotname` varchar(40) NOT NULL,
   `scenename` varchar(40) NOT NULL,
@@ -133,6 +134,7 @@ CREATE TABLE `spot` (
   KEY `city` (`city`),
   KEY `scenename` (`scenename`),
   KEY `point` (`point`),
+  KEY `spotname` (`spotname`),
   CONSTRAINT `spot_ibfk_1` FOREIGN KEY (`sceneid`) REFERENCES `scene` (`sceneid`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `spot_ibfk_2` FOREIGN KEY (`city`) REFERENCES `scene` (`city`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `spot_ibfk_3` FOREIGN KEY (`scenename`) REFERENCES `scene` (`name`) ON DELETE CASCADE ON UPDATE CASCADE
@@ -152,7 +154,7 @@ CREATE TABLE `user` (
   `nickname` varchar(10) DEFAULT NULL,
   `realname` varchar(10) NOT NULL,
   `point` int(5) NOT NULL,
-  `QQ` char(20) DEFAULT NULL,
+  `qq` char(20) DEFAULT NULL,
   `phone` char(11) DEFAULT NULL,
   `password` varchar(15) NOT NULL,
   PRIMARY KEY (`userID`)
