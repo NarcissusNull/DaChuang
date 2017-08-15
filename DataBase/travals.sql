@@ -4,16 +4,17 @@ Navicat MySQL Data Transfer
 Source Server         : localhost_3306
 Source Server Version : 80000
 Source Host           : localhost:3306
-Source Database       : traval
+Source Database       : travals
 
 Target Server Type    : MYSQL
 Target Server Version : 80000
 File Encoding         : 65001
 
-Date: 2017-08-09 15:04:42
+Date: 2017-08-15 11:36:32
 */
 create database travals;
 use travals;
+
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
@@ -26,8 +27,8 @@ CREATE TABLE `friend` (
   `friendsid` int(10) NOT NULL,
   PRIMARY KEY (`userid`,`friendsid`),
   KEY `friendsid` (`friendsid`),
-  CONSTRAINT `friend_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `friend_ibfk_2` FOREIGN KEY (`friendsid`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `friend_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `user` (`UserId`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `friend_ibfk_2` FOREIGN KEY (`friendsid`) REFERENCES `user` (`UserId`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -47,7 +48,7 @@ CREATE TABLE `history` (
   PRIMARY KEY (`userid`),
   KEY `recentspot` (`recentspot`),
   KEY `recentscene` (`recentscene`),
-  CONSTRAINT `history_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `history_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `user` (`UserId`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `history_ibfk_2` FOREIGN KEY (`recentspot`) REFERENCES `spot` (`spotname`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `history_ibfk_3` FOREIGN KEY (`recentscene`) REFERENCES `scene` (`sceneid`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -95,7 +96,7 @@ CREATE TABLE `notes` (
   KEY `auhor` (`auhor`),
   KEY `changer` (`changer`(4)),
   CONSTRAINT `notes_ibfk_1` FOREIGN KEY (`where`) REFERENCES `spot` (`sceneid`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `notes_ibfk_2` FOREIGN KEY (`auhor`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `notes_ibfk_2` FOREIGN KEY (`auhor`) REFERENCES `user` (`UserId`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -149,19 +150,19 @@ CREATE TABLE `spot` (
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
-  `userID` int(10) NOT NULL,
-  `identyid` char(18) NOT NULL,
-  `nickname` varchar(10) DEFAULT NULL,
-  `realname` varchar(10) NOT NULL,
-  `point` int(5) NOT NULL,
-  `qq` char(20) DEFAULT NULL,
-  `phone` char(11) DEFAULT NULL,
-  `password` varchar(15) NOT NULL,
-  PRIMARY KEY (`userID`)
+  `UserId` int(10) NOT NULL,
+  `IdentyId` char(18) NOT NULL,
+  `Nickname` varchar(10) DEFAULT NULL,
+  `Realname` varchar(10) NOT NULL,
+  `Point` int(5) NOT NULL,
+  `Qq` char(20) DEFAULT NULL,
+  `Phone` char(11) DEFAULT NULL,
+  `Password` varchar(15) NOT NULL,
+  PRIMARY KEY (`UserId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', '21028119612030917', 'a', 'A', '0', null, null, '');
+INSERT INTO `user` VALUES ('1', '123213424234', 'a', 'A', '0', null, null, '');
 INSERT INTO `user` VALUES ('2', '210281199612030817', 'b', 'B', '0', null, null, '');
