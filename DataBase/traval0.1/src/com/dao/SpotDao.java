@@ -62,15 +62,15 @@ public class SpotDao {
                 rs = pstmt.executeQuery();
                 Spot spot = new Spot();
                 if(option=="Point")
-                    spot.setPoint(rs.getInt(1));
+                    spot.setPoint(rs.getInt("Point"));
                 else if(option=="Sceneid")
-                    spot.setSceneid(rs.getString(1));
+                    spot.setSceneid(rs.getString("Sceneid"));
                 else if(option=="Spotname")
-                    spot.setSpotname(rs.getString(1));
+                    spot.setSpotname(rs.getString("Spotname"));
                 else if(option=="Scenename")
-                    spot.setScenename(rs.getString(1));
+                    spot.setScenename(rs.getString("Scenename"));
                 else if(option=="City")
-                    spot.setCity(rs.getString(1));
+                    spot.setCity(rs.getString("City"));
 
                 else{
                     System.out.print("User输入格式错误，请检查，该表的正确输入格式为:/n Point Sceneid Spotname Scenename City");
@@ -96,20 +96,20 @@ public class SpotDao {
         try {
             conn = DBAconnect.getConnection();
             if (conn != null) {
-                String sql = "select " + option + " from Spot Where"+conditon;//sql语句进行
+                String sql = "select " + option + " from Spot Where "+conditon;//sql语句进行
                 pstmt = conn.prepareStatement(sql);//编译预处理
                 rs = pstmt.executeQuery();
                 Spot spot = new Spot();
                 if(option=="Point")
-                    spot.setPoint(rs.getInt(1));
+                    spot.setPoint(rs.getInt("Point"));
                 else if(option=="Sceneid")
-                    spot.setSceneid(rs.getString(1));
+                    spot.setSceneid(rs.getString("Sceneid"));
                 else if(option=="Spotname")
-                    spot.setSpotname(rs.getString(1));
+                    spot.setSpotname(rs.getString("Spotname"));
                 else if(option=="Scenename")
-                    spot.setScenename(rs.getString(1));
+                    spot.setScenename(rs.getString("Scenename"));
                 else if(option=="City")
-                    spot.setCity(rs.getString(1));
+                    spot.setCity(rs.getString("City"));
 
                 else{
                     System.out.print("User输入格式错误，请检查，该表的正确输入格式为:/n Point Sceneid Spotname Scenename City");
@@ -154,83 +154,91 @@ public class SpotDao {
     public static void update(String option,String values1,String condition,String values2) throws  SQLException{
         Connection conn = null;
         PreparedStatement pstmt = null;
-        ResultSet rs = null;
         try{
             conn=DBAconnect.getConnection();
             if(conn!=null){
-                String sql="update Spot set"+option+"="+values1+" where"+condition+"="+values2;
+                String sql="update Spot set "+option+"="+values1+" where "+condition+"="+values2;
                 conn.prepareStatement(sql);
+                pstmt = conn.prepareStatement(sql);//编译预处理
+                pstmt.executeUpdate(sql);//游标，rs为执行后的
             }
         }
         catch (Exception e){//sql抛出
             e.printStackTrace();
         }
         finally {
-            rs.close();
-            pstmt.close();
             conn.close();
+            pstmt.close();
+            System.out.println("刷新完成");
+            System.out.println("change"+option+"to"+values1+" "+condition+"="+values2);
         }
     }
     public static void update(String option,String values1,String condition,int values2) throws  SQLException{
         Connection conn = null;
         PreparedStatement pstmt = null;
-        ResultSet rs = null;
         try{
             conn=DBAconnect.getConnection();
             if(conn!=null){
-                String sql="update Spot set"+option+"="+values1+" where"+condition+"="+values2;
+                String sql="update Spot set "+option+"="+values1+" where "+condition+"="+values2;
                 conn.prepareStatement(sql);
+                pstmt = conn.prepareStatement(sql);//编译预处理
+                pstmt.executeUpdate(sql);//游标，rs为执行后的
             }
         }
         catch (Exception e){//sql抛出
             e.printStackTrace();
         }
         finally {
-            rs.close();
-            pstmt.close();
             conn.close();
+            pstmt.close();
+            System.out.println("刷新完成");
+            System.out.println("change"+option+"to"+values1+" "+condition+"="+values2);
         }
     }
 
     public static void update(String option,int values1,String condition,String values2) throws  SQLException{
         Connection conn = null;
         PreparedStatement pstmt = null;
-        ResultSet rs = null;
         try{
             conn=DBAconnect.getConnection();
             if(conn!=null){
-                String sql="update Spot set"+option+"="+values1+" where"+condition+"="+values2;
+                String sql="update Spot set "+option+"="+values1+" where "+condition+"="+values2;
                 conn.prepareStatement(sql);
+                pstmt = conn.prepareStatement(sql);//编译预处理
+                pstmt.executeUpdate(sql);//游标，rs为执行后的
             }
         }
         catch (Exception e){//sql抛出
             e.printStackTrace();
         }
         finally {
-            rs.close();
-            pstmt.close();
             conn.close();
+            pstmt.close();
+            System.out.println("刷新完成");
+            System.out.println("change"+option+"to"+values1+" "+condition+"="+values2);
         }
     }
 
     public static void update(String option,int values1,String condition,int values2) throws  SQLException{
         Connection conn = null;
         PreparedStatement pstmt = null;
-        ResultSet rs = null;
         try{
             conn=DBAconnect.getConnection();
             if(conn!=null){
-                String sql="update Spot set"+option+"="+values1+" where"+condition+"="+values2;
+                String sql="update Spot set "+option+"="+values1+" where "+condition+"="+values2;
                 conn.prepareStatement(sql);
+                pstmt = conn.prepareStatement(sql);//编译预处理
+                pstmt.executeUpdate(sql);//游标，rs为执行后的
             }
         }
         catch (Exception e){//sql抛出
             e.printStackTrace();
         }
         finally {
-            rs.close();
-            pstmt.close();
             conn.close();
+            pstmt.close();
+            System.out.println("刷新完成");
+            System.out.println("change"+option+"to"+values1+" "+condition+"="+values2);
         }
     }
 }

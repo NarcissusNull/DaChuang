@@ -1,6 +1,7 @@
 package com.dao;
 
 import com.connect.DBAconnect;
+import com.mysql.jdbc.Statement;
 import com.vo.Friend;
 import com.vo.History;
 import com.vo.User;
@@ -16,6 +17,7 @@ import java.util.List;
  * Created by 13190 on 2017/8/3.
  * 将user打造为范本，将后来的重构一下2017/8.7
  * 笔记：线性表list的使用：基本功能add在末端加一个新元素，clear清空表，remove从线性表删除该元素，size返回线性表元素数目2017/8.15
+ * UserDao基本完成2017.8.17
  */
 public class UserDao {//操作User类，对应表中的user表
     public static List<User> selectall() throws SQLException {//搜索所有的用户内容，并返回一个User线性表
@@ -169,6 +171,9 @@ public class UserDao {//操作User类，对应表中的user表
         System.out.println("执行完成！"+condition+"若未删除成功请检查conditon是否正确，注意项目选项为：/nUserId IdentyId Nickname Realname Point Qq Password");
     //提示内容
     }
+    /**************************************************updeate刷新****************************************************************/
+    //注意，condition只能为主键2017。8.17
+    /**
     public static void update(String option,String values1,String condition,String values2) throws  SQLException{
         Connection conn = null;
         PreparedStatement pstmt = null;
@@ -176,9 +181,9 @@ public class UserDao {//操作User类，对应表中的user表
             conn=DBAconnect.getConnection();
             if(conn!=null){
                 String sql="update User set "+option+"="+values1+" where "+condition+"="+values2;
-                conn.prepareStatement(sql);
+                //conn.prepareStatement(sql);
                 pstmt = conn.prepareStatement(sql);//编译预处理
-                 pstmt.execute(sql);//游标，rs为执行后的
+                pstmt.executeUpdate();//游标，rs为执行后的
             }
         }
         catch (Exception e){//sql抛出
@@ -196,7 +201,26 @@ public class UserDao {//操作User类，对应表中的user表
             conn=DBAconnect.getConnection();
             if(conn!=null){
                 String sql="update User set "+option+" = "+values1+" where "+condition+" ="+values2;
-                conn.prepareStatement(sql);
+                //conn.prepareStatement(sql);
+                pstmt = conn.prepareStatement(sql);//编译预处理
+                pstmt.executeUpdate(sql);//游标，rs为执行后的
+            }
+        }
+        catch (Exception e){//sql抛出
+            e.printStackTrace();
+        }
+        finally {
+            pstmt.close();
+            conn.close();
+        }
+    }*/
+    public static void update(String option,int values1,String condition,int values2) throws  SQLException{
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        try{
+            conn=DBAconnect.getConnection();
+            if(conn!=null){
+                String sql="update User set "+option+" = "+values1+" where "+condition+"="+values2;
                 pstmt = conn.prepareStatement(sql);//编译预处理
                 pstmt.executeUpdate();//游标，rs为执行后的
             }
@@ -207,27 +231,10 @@ public class UserDao {//操作User类，对应表中的user表
         finally {
             pstmt.close();
             conn.close();
+            System.out.println("刷新完成");
+            System.out.println("change"+option+"to"+values1+" "+condition+"="+values2);
         }
-    }
-    public static void update(String option,int values1,String condition,int values2) throws  SQLException{
-        Connection conn = null;
-        PreparedStatement pstmt = null;
-        try{
-            conn=DBAconnect.getConnection();
-            if(conn!=null){
-                String sql="update User set "+option+" = "+values1+" where "+condition+"="+values2;
-                conn.prepareStatement(sql);
-                pstmt = conn.prepareStatement(sql);//编译预处理
-                pstmt.execute(sql);//游标，rs为执行后的
-            }
-        }
-        catch (Exception e){//sql抛出
-            e.printStackTrace();
-        }
-        finally {
-            pstmt.close();
-            conn.close();
-        }
+
     }
     public static void update(String option,String values1,String condition,int values2) throws  SQLException{
         //测试通过可用
@@ -238,9 +245,8 @@ public class UserDao {//操作User类，对应表中的user表
             if(conn!=null){
                 String sql="update User set "+option+"="+values1+" where "+condition+"="+values2;
                 conn.prepareStatement(sql);
-                conn.prepareStatement(sql);
                 pstmt = conn.prepareStatement(sql);//编译预处理
-                pstmt.execute(sql);//游标，rs为执行后的
+                pstmt.executeUpdate(sql);//游标，rs为执行后的
             }
         }
         catch (Exception e){//sql抛出
@@ -249,20 +255,25 @@ public class UserDao {//操作User类，对应表中的user表
         finally {
             conn.close();
             pstmt.close();
+            System.out.println("刷新完成");
+            System.out.println("change"+option+"to"+values1+" "+condition+"="+values2);
         }
     }
-    public static void insert(User users) throws SQLException{
+    public static void insert1(User users) throws SQLException{//用于插入完整的记录
         Connection conn = null;
         PreparedStatement pstmt = null;
-        users=new User();
+        Statement stmt = null;
+       //users=new User();
         try{
             conn=DBAconnect.getConnection();
             if(conn!=null){
-                String sql="insert into User (UserId,IdentyId,Nickname,Realname,Point,Qq,Phone,Password) values (?,?,?,?,?,?,?,?)";
-                        /**+" ("+users.getUserId()+"," +users.getIdentyid()+","+users.getNickname()+","
-                        +users.getRealname()+","+users.getPoint()+","+users.getQq()+users.getPhone()+","+users.getPassword()+")";*/
-                conn.prepareStatement(sql);
-                pstmt = conn.prepareStatement(sql);//编译预处理
+              String sql="insert into User(UserId,IdentyId,Nickname,Realname,Point,Qq,Phone,Password) VALUES(?,?,?,?,?,?,?,?)";
+                // String sql="insert into User (UserId,IdentyId,Realname,Point,password) VALUES(5,dfsadfsafsa,c,0,d98fa9dfa)";
+                //String sql=null;
+                //conn.prepareStatement(sql);
+               pstmt=conn.prepareStatement(sql);
+              // pstmt.execute(sql);//游标，rs为执行后的
+               // pstmt = conn.prepareStatement(sql);//编译预处理
                 pstmt.setInt(1,users.getUserId());
                 pstmt.setString(2,users.getIdentyid());
                 pstmt.setString(3,users.getNickname());
@@ -271,14 +282,54 @@ public class UserDao {//操作User类，对应表中的user表
                 pstmt.setString(6,users.getQq());
                 pstmt.setString(7,users.getPhone());
                 pstmt.setString(8,users.getPassword());
-               int i= pstmt.executeUpdate();//游标，rs为执行后的
-                if(i!=0)
-                    System.out.print("Wrong");
+                pstmt.execute();
+
+
             }
         }
+        catch (Exception e){//sql抛出
+            e.printStackTrace();
+        }
         finally {
-            conn.close();
             pstmt.close();
+            conn.close();
+
+        }
+    }
+
+    public static void insert2(User users) throws SQLException{//用于插入无Qq与phone的记录
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        Statement stmt = null;
+        //users=new User();
+        try{
+            conn=DBAconnect.getConnection();
+            if(conn!=null){
+                String sql="insert into User(UserId,IdentyId,Nickname,Realname,Point,Password) VALUES(?,?,?,?,?,?)";
+                // String sql="insert into User (UserId,IdentyId,Realname,Point,password) VALUES(5,dfsadfsafsa,c,0,d98fa9dfa)";
+                //String sql=null;
+                //conn.prepareStatement(sql);
+                pstmt=conn.prepareStatement(sql);
+                // pstmt.execute(sql);//游标，rs为执行后的
+                // pstmt = conn.prepareStatement(sql);//编译预处理
+                pstmt.setInt(1,users.getUserId());
+                pstmt.setString(2,users.getIdentyid());
+                pstmt.setString(3,users.getNickname());
+                pstmt.setString(4,users.getRealname());
+                pstmt.setInt(5,users.getPoint());
+                pstmt.setString(6,users.getPassword());
+                pstmt.execute();
+
+
+            }
+        }
+        catch (Exception e){//sql抛出
+            e.printStackTrace();
+        }
+        finally {
+            pstmt.close();
+            conn.close();
+
         }
     }
 }

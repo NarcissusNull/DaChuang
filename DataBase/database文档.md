@@ -66,17 +66,17 @@ _____________________________
           >  public static List<User> select(String option,String conditon)option为需要搜索的仙姑，condition为需要搜索的条件*
  > *delete删除功能*
         > public static void  delete(String condition)condition为需要删除的
- >*update更新添加，修改功能* 
-       >  public static void Update(String option,String values1,String condition,String values2)
-       > public static void Update(String option,int values1,String condition,String values2) 
+ >*update更新添加，修改功能，注意，condition应该是主键* 
        >  public static void Update(String option,int values1,String condition,int values2)
        >   public static void Update(String option,String values1,String condition,int values2)
        >option，condition为更新的内容与更i性能的条件，问题是一次只能更新一次  
    >*insert添加新行*
-        >   public static void insert(User users) 向User表内插入新内容(未成功)
+        >   public static void insert1(User users) 向User表内插入新内容()完整
+        >    public static void insert2(User users) 向User表内插入新内容()不完整
      *   NotesDao类  
 *select搜索功能*
           > public static List<Notes> selectall() 查询Notes表中所有信息，并返回一个线性表
+          > 
         
 
 

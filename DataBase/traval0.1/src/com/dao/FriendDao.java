@@ -115,14 +115,13 @@ public List<Friend> select(String option) throws SQLException{
     public static void deluserid(int userid) throws Exception{
         Connection conn = null;
         PreparedStatement pstmt = null;
-        ResultSet rs = null;
         try {
             conn=DBAconnect.getConnection();
             if(conn!=null){
              String sql="delete from friend where userid ="+userid;
              pstmt=conn.prepareStatement(sql);
              pstmt = conn.prepareStatement(sql);//编译预处理
-              rs= pstmt.executeQuery();
+                pstmt.executeQuery();
               pstmt.executeUpdate();
             }
         }
@@ -130,7 +129,6 @@ public List<Friend> select(String option) throws SQLException{
             e.printStackTrace();
         }
         finally {
-            rs.close();
             pstmt.close();
             conn.close();
         }
@@ -138,14 +136,12 @@ public List<Friend> select(String option) throws SQLException{
     public void delidentyid(String identyid) throws Exception{
         Connection conn = null;
         PreparedStatement pstmt = null;
-        ResultSet rs = null;
         try {
             conn=DBAconnect.getConnection();
             if(conn!=null){
                 String sql="delete from friend where identyid="+identyid;
                 pstmt=conn.prepareStatement(sql);
                 pstmt = conn.prepareStatement(sql);//编译预处理
-                rs= pstmt.executeQuery();
                 pstmt.executeUpdate();
             }
         }
@@ -153,7 +149,6 @@ public List<Friend> select(String option) throws SQLException{
             e.printStackTrace();
         }
         finally {
-            rs.close();
             pstmt.close();
             conn.close();
         }
@@ -161,14 +156,12 @@ public List<Friend> select(String option) throws SQLException{
     public static void delfriendsid(int friendsid) throws Exception{
         Connection conn = null;
         PreparedStatement pstmt = null;
-        ResultSet rs = null;
         try {
             conn=DBAconnect.getConnection();
             if(conn!=null){
                 String sql="delete from friend where friendsid="+friendsid;
                 pstmt=conn.prepareStatement(sql);
                 pstmt = conn.prepareStatement(sql);//编译预处理
-                rs= pstmt.executeQuery();
                 pstmt.executeUpdate();
             }
         }
@@ -176,7 +169,6 @@ public List<Friend> select(String option) throws SQLException{
             e.printStackTrace();
         }
         finally {
-            rs.close();
             pstmt.close();
             conn.close();
         }
@@ -189,14 +181,14 @@ public List<Friend> select(String option) throws SQLException{
             conn=DBAconnect.getConnection();
             if(conn!=null){
                 String sql="update friends set identyid="+identyid+"where userid="+userid;
-                conn.prepareStatement(sql);
+                pstmt=conn.prepareStatement(sql);
+                pstmt.executeUpdate();
             }
         }
         catch (Exception e){//sql抛出
             e.printStackTrace();
         }
         finally {
-            rs.close();
             pstmt.close();
             conn.close();
         }
@@ -204,19 +196,18 @@ public List<Friend> select(String option) throws SQLException{
     public void updateuserid (int friendsid,int userid)throws Exception{//更新表格friedns
         Connection conn = null;
         PreparedStatement pstmt = null;
-        ResultSet rs = null;
         try{
             conn=DBAconnect.getConnection();
             if(conn!=null){
                 String sql="update friends set friendsid="+friendsid+" where userid= "+userid;
-                conn.prepareStatement(sql);
+                pstmt=conn.prepareStatement(sql);
+                pstmt.executeUpdate();
             }
         }
         catch (Exception e){//sql抛出
             e.printStackTrace();
         }
         finally {
-            rs.close();
             pstmt.close();
             conn.close();
         }
@@ -224,19 +215,18 @@ public List<Friend> select(String option) throws SQLException{
     public static void updateall(int userid,String identyid,int friendsid)throws Exception{//更新全部表格
         Connection conn = null;
         PreparedStatement pstmt = null;
-        ResultSet rs = null;
         try{
             conn=DBAconnect.getConnection();
             if(conn!=null){
                 String sql="update friends set friendsid="+friendsid+",identid="+identyid+" where userid="+userid;
-                conn.prepareStatement(sql);
+                pstmt=conn.prepareStatement(sql);
+                pstmt.executeUpdate();
             }
         }
         catch (Exception e){//sql抛出
             e.printStackTrace();
         }
         finally {
-            rs.close();
             pstmt.close();
             conn.close();
         }

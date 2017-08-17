@@ -42,19 +42,37 @@ public class Test {
         * System.out.print(b);*/
 
        /**更新操作，由于是复制，且用得是重写方式，故而检验一个即可
-        *  UserDao.update("IdentyId","123213424234","UserId",1);//可运行，结果不对
+        *  //可运行
+        *  UserDao.update("Point",8,"UserId",1);
+        UserDao.update("IdentyId","123213424234","UserId",1);
+        2017.8.17
        */
 
        /**删除操作，经检验，可用
         *  UserDao.delete("UserId=0");
         * */
-       users.setUserId(0);
-       users.setPassword("sdfsafsdfs");
-       users.setRealname("sdf");
-       users.setPoint(0);
-       UserDao.insert(users);
-       /***********************************8.15测试UserDao类，基本完成*************************************************/
 
+       /***********************************8.15测试UserDao类，基本完成*************************************************/
+       /**insert1添加记录，添加含有所有选项的记录
+        users.setUserId(0);
+        users.setIdentyid("234423445");
+        users.setNickname("NICNAME");
+        users.setRealname("Realname");
+        users.setPoint(0);
+        users.setQq("3243432532");
+        users.setPhone("21342342352");
+        users.setPassword("sdfsafsdfs");
+        UserDao.insert1(users);
+        //测试insert2用于添加含有可空向的项目
+        users.setUserId(4);
+        users.setIdentyid("213214324343");
+        users.setNickname("NICNAME");
+        users.setRealname("Realname");
+        users.setPoint(0);
+        users.setPassword("sdfsafsdfs");
+        UserDao.insert2(users);
+        2017.8.17*/
+        /***************************UserDao完成************************************************/
 
     }
 

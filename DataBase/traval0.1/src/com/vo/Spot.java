@@ -6,49 +6,49 @@ package com.vo;
  * Created by 13190 on 2017/7/12.
  */
 public class Spot {
-    private static int point;
-    private static String sceneid;
-    private static String spotname;
-    private static String scenename;
-    private static String city;
-    private static String spot;
+    private static int Point;
+    private static String Sceneid;
+    private static String potname;
+    private static String Scenename;
+    private static String City;
+    private static String Spotname;
    // private DriverManagerDataSource datasourse;
     public Spot(){
     }
-    public Spot(int Point,String Sceneid,String Spotname,String Scenename,String City){
-        point=Point;
-        sceneid=Sceneid;
-        spot=Spotname;
-        scenename=Scenename;
-        city=City;
+    public Spot(int point,String sceneid,String spot,String scenename,String city){
+        Point=point;
+        Sceneid=sceneid;
+        Spotname=spot;
+        Scenename=scenename;
+        City=city;
     }
-    public void setPoint(int Point){
-        point =Point;
+    public void setPoint(int point){
+        Point=point;
     }
-    public void setSceneid(String Sceneid){
-        sceneid=Sceneid;
+    public void setSceneid(String sceneid){
+        Sceneid=sceneid;
     }
-    public void setSpotname(String Spotname){spotname=Spotname;}
-    public void setScenename(String Scenename){
-        scenename=Scenename;
+    public void setSpotname(String spot){Spotname=spot;}
+    public void setScenename(String scenename){
+        Scenename=scenename;
     }
-    public void setCity(String City){
+    public void setCity(String city){
         city=City;
     }
 
    // public void setSpotname(String Spot){spot=Spot};
     public int getPoint(){
-        return point;
+        return Point;
     }
     public String getSceneid(){
-        return sceneid;
+        return Sceneid;
     }
-    public String getSpotname(){return spotname;}
+    public String getSpotname(){return Spotname;}
     public String getScenename(){
-        return scenename;
+        return Scenename;
     }
     public String getCity(){
-        return city;
+        return City;
     }
 
 
