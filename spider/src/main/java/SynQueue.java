@@ -2,10 +2,15 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
+ * 多线程队列,也就是仓库
  * Created by Narcissus on 2017/7/21.
  */
 public class SynQueue {
     private Queue<String> queue;
+
+    public SynQueue(){
+        queue = new LinkedList<String>();
+    }
 
     public synchronized String pull(){
         while (queue.isEmpty()) {

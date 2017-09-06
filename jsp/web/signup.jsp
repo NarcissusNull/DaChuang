@@ -1,4 +1,5 @@
 <%--
+  注册结果界面
   Created by IntelliJ IDEA.
   User: Narcissus
   Date: 2017/7/20
