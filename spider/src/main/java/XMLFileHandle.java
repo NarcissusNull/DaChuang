@@ -15,6 +15,7 @@ import java.io.*;
 
 public class XMLFileHandle {
 
+    private String   filename;
     private Document document;
     //XML文件主体
 
@@ -31,12 +32,12 @@ public class XMLFileHandle {
     /**
      * 创建时使用的构造方法，添加基础标签
      * @param titleText     标题
-     * @param src           背景图片存储路径
-     * @param titleImgText  背景图片描述
+     * @param titleImgText  背景图片
      * @param dateText      时间
      * @param authorText    作者编号
      */
-    public XMLFileHandle(String titleText, String src, String titleImgText, String dateText, String authorText){
+    public XMLFileHandle(String filename, String titleText, String titleImgText, String dateText, String authorText){
+        this.filename    = "F:/DaChuang/"+filename;
         Element travel   = DocumentHelper.createElement("travel");
         document = DocumentHelper.createDocument(travel);
         //创建根标签
@@ -94,7 +95,7 @@ public class XMLFileHandle {
         outputFormat.setEncoding("UTF-8");
         //设置编码方式
         try {
-            XMLWriter xmlWriter = new XMLWriter(new FileOutputStream("test.xml"),outputFormat);
+            XMLWriter xmlWriter = new XMLWriter(new FileOutputStream(filename),outputFormat);
             xmlWriter.write(document);
             xmlWriter.close();
         } catch (UnsupportedEncodingException e) {

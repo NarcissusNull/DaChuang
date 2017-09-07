@@ -1,11 +1,11 @@
 <%--
+  登录结果界面
   Created by IntelliJ IDEA.
   User: Narcissus
   Date: 2017/7/19
   Time: 16:01
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="java.io.*,java.util.*" %>
 <!DOCTYPE html>
 <html>
     <head>

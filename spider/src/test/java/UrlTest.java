@@ -9,11 +9,13 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
+ * 自动下载网页源代码
  * Created by Narcissus on 2017/7/17.
  */
 public class UrlTest {
     public static void main(String[] args) throws IOException {
-        String url = new String("http://chanyouji.com/trips/139307#nt/5910916");
+        String url = new String("http://chanyouji.com/trips/68581");
+        //更改测试网址
         Document document;
         document = Jsoup.connect(url).get();
         File file = new File("test.html");

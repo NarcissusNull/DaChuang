@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html id="h-trips-show">
+ <head>
+  <meta charset="utf-8">
+  <title>寻不到咖啡馆的seoul之旅 - 蝉游记</title> 
+  <meta content="那些一生只见一次的美景你怎么舍得遗忘,10分钟写出漂亮游记" name="description"> 
+  <meta content="游记,旅游攻略,自助游" name="keywords">
+  <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible"> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"0c03f505b7","applicationID":"1959152","transactionName":"IlhbRxAKWV9QQxpARghHRhwRDVpE","queueTime":0,"applicationTime":29,"ttGuid":"","agentToken":null,"agent":""}</script> 
+  <script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <meta content="initial-scale=1,user-scalable=no,width=device-width" name="viewport">
+  <meta content="format=html5;url=http://chanyouji.com/trips/68581" name="mobile-agent">
+  <link href="http://cdn.chanyouji.cn/assets/favicon-28d3ebf155339de4149e853c89268c5e.ico" rel="shortcut icon">
+  <link href="http://cdn.chanyouji.cn/assets/touch-icon-c76a8f4b30feb31dc695f9d7ecc9e47d.png" rel="apple-touch-icon-precomposed">
+  <link href="http://cdn.chanyouji.cn/assets/touch-icon-72-80cc1d2402b32d2193cf7f660a788fe4.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+  <link href="http://cdn.chanyouji.cn/assets/touch-icon-114-cb5717b20da55cb9b43d5e35b4eb6bca.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+  <link href="http://cdn.chanyouji.cn/assets/mobile-96f097affb3fe7d8042f942b644ad74b.css" media="all" rel="stylesheet" type="text/css">
+  <script src="http://cdn.chanyouji.cn/assets/mobile-4d11a84fefbe913878143ae7f409d31f.js" type="text/javascript"></script>
+  <meta content="authenticity_token" name="csrf-param"> 
+  <meta content="5wjIEqUVIq2FxlQpZE3Nve9rWVW2677gye5b3yf58sE=" name="csrf-token">
+ </head>
+ <body id="trips-show">
+  <div class="body-content">
+   <div class="page-header">
+    <a class="page-back-button logo" href="/"></a>
+   </div>
+   <div class="trip-show">
+    <div class="trip-header">
+     <img alt="1378868376182p1845f8j8a72ffk5tsprdm47vh" class="cover" src="http://cyj.qiniudn.com/68581/1378868376182p1845f8j8a72ffk5tsprdm47vh.jpg-600x360">
+     <div class="mask"></div>
+     <div class="user-avatar">
+      <a href="/users/2477"><img alt="6b786f59jw8ewi9d6hpa2j20e80e83yl" src="http://tva4.sinaimg.cn/crop.0.0.512.512.50/6b786f59jw8ewi9d6hpa2j20e80e83yl.jpg"></a>
+     </div>
+     <h1 class="trip-title">寻不到咖啡馆的seoul之旅</h1>
+     <p class="trip-summary">2013年9月2日 | 4天 | 62图</p>
+    </div>
+    <div class="trip-body">
+     <div class="trip-day">
+      <span class="day-index">DAY 1</span>
+     </div>
+     <div class="trip-note is-last">
+      <a name="nt/2871024"></a>
+      <div class="note-text">
+       <p>这是一个女人去了会疯掉男人去了也会疯掉的城市，女人疯掉是因为有各种东西可以买，各种小店可以逛，男人疯掉则是因为：反之。</p>
+      </div>
+     </div>
+     <div class="trip-node clearfix">
+      <a name="nd/569119"></a>
+      <div class="ico ico-sight"></div>
+      <div class="node-info">
+       <div class="node-name">
+        <a href="/attractions/33660">弘益大学及周边</a>
+       </div>
+       <div class="score">
+        <i>★</i>
+        <i>★</i>
+        <i>★</i>
+        <i>★</i>
+        <i>★</i>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2871150"></a>
+      <div class="note-text">
+       <p>原本以为赶在星期六的中午到达首尔，下午还能去弘大逛个freemarket，结果高估了自己的找路能力。两点的样子从位于明洞的guesthouse出发，换2号线坐到弘大站，出来问了圈人愣是没找弘大，更不要说门口的freemarket了，看看时间，三点多了，freemarket可是16点就结束了啊！好吧放弃！然后看这腔势，一心想着要去的弘大附近的aA art museum cafe也是别想找到的，好吧随缘！于是随便拐进弘大商圈的某条小路开始逛了起来，虽然这天没有按预设的进行，但是也算不错！（唯一租了随身wifi的某同学因为要去看GD演唱会暂时和我们分开旅行，这也直接导致了路盲们的一天）</p>
+      </div>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33660">弘益大学及周边</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870864"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378867913328p1845esosfe2n1qofc1c5csner6.jpg-display_ll" data-width="1200">
+       <figcaption class="caption">
+        <p>随便看到了一家咖啡馆就进了 应该是家连锁 首尔遍地都是咖啡馆啊</p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33660">弘益大学及周边</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870867"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378867922547p1845esosf4q21ru7b8m1ftv1tra9.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33660">弘益大学及周边</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870862"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378867904310p1845esosfd35opr1lme1ssi1m954.jpg-display_ll" data-width="1200">
+       <figcaption class="caption">
+        <p>@coffeebene</p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33660">弘益大学及周边</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870863"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378867908087p1845esosf1m36veihif17l1vrm5.jpg-display_ll" data-width="1200">
+       <figcaption class="caption">
+        <p>这里的咖啡馆都会用玻璃门隔出一个专门的吸烟区</p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33660">弘益大学及周边</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870865"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378867915995p1845esosf19vf1a3a1kp6vbk1huo7.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33660">弘益大学及周边</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870870"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378867927307p1845esosfke19bc11i8utr14jkb.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33660">弘益大学及周边</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870868"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378867924957p1845esosf1linf2rnbb1bel174sa.jpg-display_ll" data-width="1200">
+       <figcaption class="caption">
+        <p>逛到一个卖文具，首饰，家居用品的店 很喜欢</p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33660">弘益大学及周边</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870871"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378867930704p1845esosf1jsdbjgksedp9t6qc.jpg-display_ll" data-width="1200">
+       <figcaption class="caption">
+        <p>这幢建筑应该是个饭店</p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33660">弘益大学及周边</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870872"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378867936054p1845esosfh4qjcfoj5h4n68ed.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33660">弘益大学及周边</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870873"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378867942140p1845esosf1p5aqkuibq1v1k1kq7e.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33660">弘益大学及周边</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870874"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378867946663p1845esosf1mh71fp71d1s1f0dm54f.jpg-display_ll" data-width="1200">
+       <figcaption class="caption">
+        <p>突然间下起了大雨 一群人顶着塑料袋冲向地铁站</p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33660">弘益大学及周边</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note is-last">
+      <a name="nt/2870876"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378867957549p1845esosf1kef1ost1d9trkq1njgh.jpg-display_ll" data-width="1200">
+       <figcaption class="caption">
+        <p>hey 姑娘长得有点像朴信惠啊</p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33660">弘益大学及周边</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-node clearfix">
+      <a name="nd/569120"></a>
+      <div class="ico ico-sight"></div>
+      <div class="node-info">
+       <div class="node-name">
+        <a href="/attractions/33674-ewha-womans-university">梨花女子大学</a>
+       </div>
+       <div class="score">
+        <i>★</i>
+        <i>★</i>
+        <i>★</i>
+        <i>★</i>
+        <i>★</i>
+       </div>
+      </div>
+      <div class="desc">
+       强烈推荐
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2871629"></a>
+      <div class="note-text">
+       <p>因为是晚上去的梨大 所以没拍照片 走在校园里的时候 真是由衷地羡慕啊！！！！</p>
+      </div>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33674-ewha-womans-university">梨花女子大学</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870861"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378867901759p1845esosf9ujkccavep5h2ij3.jpg-display_ll" data-width="1200">
+       <figcaption class="caption">
+        <p>逛了圈梨大肚子饿了，就在旁边的小路上随便进了一家小店，好吃到痛哭流涕，而且还很便宜！</p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33674-ewha-womans-university">梨花女子大学</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870860"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378867897273p1845esosf1qrenrk1mth87d1t942.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33674-ewha-womans-university">梨花女子大学</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870875"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="1200" data-src="http://p.chanyouji.cn/68581/1378867950500p1845esosf1t5p1eo91vfnqrki9ag.jpg-display_ll" data-width="800">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33674-ewha-womans-university">梨花女子大学</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note is-last">
+      <a name="nt/2870877"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378867962484p1845esosfrv61ca21juj1hpo97hi.jpg-display_ll" data-width="1200">
+       <figcaption class="caption">
+        <p>买完两把伞雨就停了</p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33674-ewha-womans-university">梨花女子大学</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-day">
+      <span class="day-index">DAY 2</span>
+     </div>
+     <div class="trip-node clearfix">
+      <a name="nd/569123"></a>
+      <div class="ico ico-sight"></div>
+      <div class="node-info">
+       <div class="node-name">
+        <a href="/attractions/154704-myeongdong">明洞</a>
+       </div>
+       <div class="score">
+        <i>★</i>
+        <i>★</i>
+        <i>★</i>
+        <i>★</i>☆
+       </div>
+      </div>
+      <div class="desc">
+       明洞给我的感觉有点像南京路。。。
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2871630"></a>
+      <div class="note-text">
+       <p>早上起来趁着还早在民宿的附近晃了一圈，旅途中还是穿街入巷的时光最叫人怀念</p>
+      </div>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/154704-myeongdong">明洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870970"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868129646p1845f3p4c1uvq3961otens8dsg3.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/154704-myeongdong">明洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870969"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868126879p1845f3p4c6pgaeojc5ie8dlq2.jpg-display_ll" data-width="1200">
+       <figcaption class="caption">
+        <p>一家裁缝店</p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/154704-myeongdong">明洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870971"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868131798p1845f3p4cage1pnr1er010rmjud4.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/154704-myeongdong">明洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870972"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868138708p1845f3p4c1qjs198m1di61at31nlu5.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/154704-myeongdong">明洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870973"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868143776p1845f3p4c2nh16eh1pfgq30b3u6.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/154704-myeongdong">明洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870974"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868152622p1845f3p4cii17v71bbr179n1fna7.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/154704-myeongdong">明洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870975"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868161461p1845f3p4c1ll61pfq172t1k48e7s8.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/154704-myeongdong">明洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870976"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868168961p1845f3p4c11i7rqo4lm1c0213ji9.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/154704-myeongdong">明洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870977"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868176447p1845f3p4c1iqt182qeq7vbp3gja.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/154704-myeongdong">明洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870978"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868181737p1845f3p4c1gqu1evi8phrk4139lb.jpg-display_ll" data-width="1200">
+       <figcaption class="caption">
+        <p>寻常人家的后院</p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/154704-myeongdong">明洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870979"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868187364p1845f3p4c12s4chrujbo55vqsc.jpg-display_ll" data-width="1200">
+       <figcaption class="caption">
+        <p>我们住的guesthouse 对面有一个vespa专卖店 天天被毒</p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/154704-myeongdong">明洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870982"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868196353p1845f3p4cj1cn281s8g51rdrf.jpg-display_ll" data-width="1200">
+       <figcaption class="caption">
+        <p>店里的两个小哥好好啊！而且英语都讲得不错交流非常顺畅</p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/154704-myeongdong">明洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870980"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868190641p1845f3p4cv90h59dpdqk6cjqd.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/154704-myeongdong">明洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870983"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868199104p1845f3p4crv2b7g14jhjk25bug.jpg-display_ll" data-width="1200">
+       <figcaption class="caption">
+        <p>乐天地下的大食代 </p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/154704-myeongdong">明洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870984"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868201386p1845f3p4c1bto1vo6k9l1a8fbdph.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/154704-myeongdong">明洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note is-last">
+      <a name="nt/2870985"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868204190p1845f3p4c12eroga1bka1f1vi01i.jpg-display_ll" data-width="1200">
+       <figcaption class="caption">
+        <p>明洞商业街</p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/154704-myeongdong">明洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-day">
+      <span class="day-index">DAY 3</span>
+     </div>
+     <div class="trip-node clearfix">
+      <a name="nd/569127"></a>
+      <div class="ico ico-sight"></div>
+      <div class="node-info">
+       <div class="node-name">
+        <a href="/attractions/33639">景福宫</a>
+       </div>
+       <div class="score">
+        <i>★</i>
+        <i>★</i>
+        <i>★</i>☆☆
+       </div>
+      </div>
+      <div class="desc">
+       就其实真的没啥好去的，见过我大故宫，怎还会把景福宫放在眼里啊
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2871004"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868397253p1845f8j8a1q9t1fp3buqjvt19kpl.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33639">景福宫</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870987"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868290636p1845f8j8abvn1tl11g4p1e1m1rba3.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33639">景福宫</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2871007"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868417196p1845f8j8au17gdh1jf1jjn4mgo.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33639">景福宫</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870989"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868300796p1845f8j8a1cnn1hnk163115ne1n595.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33639">景福宫</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870990"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868305621p1845f8j8a26h1dcn148jjpp1jf36.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33639">景福宫</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870991"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868313026p1845f8j8a10t311uc3351r7skin7.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33639">景福宫</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870997"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868359002p1845f8j8a1icgcikanmmdn3j8e.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33639">景福宫</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2871000"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868376182p1845f8j8a72ffk5tsprdm47vh.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33639">景福宫</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2871001"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868382669p1845f8j8adiv1c2t17l5fi38qi.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33639">景福宫</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2871003"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868392026p1845f8j8a5j9ai31mipecq1ekfk.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33639">景福宫</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870986"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868284705p1845f8j7qarcuq7llh1th21bun2.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33639">景福宫</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2871006"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868409253p1845f8j8auirrib1v4v32g1017n.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33639">景福宫</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870988"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868295934p1845f8j8a1pkbd2k65se4q7b64.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33639">景福宫</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note is-last">
+      <a name="nt/2871008"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868420925p1845f8j8a1plh13u9dhj271dqjp.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33639">景福宫</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-node clearfix">
+      <a name="nd/569128"></a>
+      <div class="ico ico-sight"></div>
+      <div class="node-info">
+       <div class="node-name">
+        <a href="/attractions/33638">三清洞</a>
+       </div>
+       <div class="score">
+        <i>★</i>
+        <i>★</i>
+        <i>★</i>
+        <i>★</i>
+        <i>★</i>
+       </div>
+      </div>
+      <div class="desc">
+       大概是此次首尔之行最喜欢的一个地方。可是如此小清新的地方我居然装的是黑白卷？！册！
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870992"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868317187p1845f8j8a1v6h1tbl1q7p1vbpb598.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33638">三清洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870996"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868338302p1845f8j8a81otgci675kf4vhc.jpg-display_ll" data-width="1200">
+       <figcaption class="caption">
+        <p>三清洞逛到一家很小清新的服饰店</p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33638">三清洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2871670"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="1440" data-src="http://p.chanyouji.cn/68581/1378875502166p1845m4mgm1f1j16bj16isp27188t3.jpg-display_ll" data-width="1440">
+       <figcaption class="caption">
+        <p>连试衣间的门都这么精致，四块不同花样的玻璃</p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33638">三清洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2871669"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="1440" data-src="http://p.chanyouji.cn/68581/1378875497008p1845m4mgmj80lqp1v4n19pfegk2.jpg-display_ll" data-width="1440">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33638">三清洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870993"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868319829p1845f8j8aeskkig142i1shdnn99.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33638">三清洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870994"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868327531p1845f8j8at9117le15s717rcgf3a.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33638">三清洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870998"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868364900p1845f8j8ac73mqopn92tf9bf.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33638">三清洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870995"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868333242p1845f8j8a1s3qm3jsec176f1g5pb.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33638">三清洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2870999"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868369458p1845f8j8a12rb1ebrkmu1sg515uug.jpg-display_ll" data-width="1200">
+       <figcaption class="caption">
+        <p>黑白的一刚黑白的一刚黑白的一刚</p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33638">三清洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2871002"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868386951p1845f8j8abb41ska1g2k85m1p9oj.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33638">三清洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note is-last">
+      <a name="nt/2871009"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868430748p1845f8j8ahvd3nbv89no1ccrd.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33638">三清洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-node clearfix">
+      <a name="nd/569129"></a>
+      <div class="ico ico-sight"></div>
+      <div class="node-info">
+       <div class="node-name">
+        <a href="/attractions/33645">仁寺洞</a>
+       </div>
+       <div class="score">
+        <i>★</i>
+        <i>★</i>
+        <i>★</i>
+        <i>★</i>
+        <i>★</i>
+       </div>
+      </div>
+      <div class="desc">
+       感觉没好好逛，就在路口的一条支路走了下，应该是叫钟路，很是喜欢，有一家卖手作陶器和扎染衣物的小店印象深刻。 
+      </div>
+     </div>
+     <div class="trip-note is-last">
+      <a name="nt/2871005"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868403317p1845f8j8ammgu41r751m52l3m.jpg-display_ll" data-width="1200">
+       <figcaption class="caption">
+        <p>仁寺洞一带有很多门面看上去都很嗲的餐馆，我们随便进了一家，因为没有席地而坐的位子，老板娘把我们让到了里间，看上去应该就是他们自己平时住的房间，</p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/33645">仁寺洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-day">
+      <span class="day-index">DAY 4</span>
+     </div>
+     <div class="trip-node clearfix">
+      <a name="nd/569130"></a>
+      <div class="ico ico-sight"></div>
+      <div class="node-info">
+       <div class="node-name">
+        <a href="/attractions/154704-myeongdong">明洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-note is-last">
+      <a name="nt/2871016"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868505854p1845ffb7e4pql2cach9jom2e2.jpg-display_ll" data-width="1200">
+       <figcaption class="caption">
+        <p>hollyscoffee，跟星巴克一样的连锁店，到处都是。最后一天的早晨在这里吃brunch，朋友强烈推荐一款芝士火腿三明治，我能说没吃过这么好吃的三明治么！！</p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>
+        <a href="/attractions/154704-myeongdong">明洞</a>
+       </div>
+      </div>
+     </div>
+     <div class="trip-node clearfix">
+      <a name="nd/569131"></a>
+      <div class="ico ico-attraction"></div>
+      <div class="node-info">
+       <div class="node-name">
+        林荫道
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2871631"></a>
+      <div class="note-text">
+       <p>江南地区 传说中的富人区 可我总觉得走到的还不是林荫道啊！不过也有很多小店可逛 </p>
+      </div>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>林荫道
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2871020"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868529393p1845ffb7e3hn1erm1i62pcve806.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>林荫道
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2871019"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868521241p1845ffb7ete6rbg1htbsqe55j5.jpg-display_ll" data-width="1200">
+       <figcaption class="caption">
+        <p>可惜没时间去这家咖啡馆坐坐，整个二楼的开阔空间，很特别</p>
+       </figcaption>
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>林荫道
+       </div>
+      </div>
+     </div>
+     <div class="trip-note">
+      <a name="nt/2871021"></a>
+      <figure class="note-photo">
+       <img class="photo image-placeholder" data-height="800" data-src="http://p.chanyouji.cn/68581/1378868534772p1845ffb7e14d6s4h1d5j5bg1tm27.jpg-display_ll" data-width="1200">
+      </figure>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>林荫道
+       </div>
+      </div>
+     </div>
+     <div class="trip-note is-last">
+      <a name="nt/2871632"></a>
+      <div class="note-text">
+       <p>四天三夜的初次首尔之旅，aA art museum café，D_55，mmmg，takeout Drawing Café，rabbit café，这些预计要去的咖啡馆一个都没去到，不过首尔这地方，随便逛逛也总是会有惊喜，所有去过的人当被问起感受时，说的第一句话都是：还要去。当然，仅限女人。</p>
+      </div>
+      <div class="note-action">
+       <div class="note-node">
+        <i class="ico"></i>林荫道
+       </div>
+      </div>
+     </div>
+     <div class="trip-tips">
+      <div class="tips-header clearfix">
+       <i class="ico"></i>旅行小贴士
+      </div>
+      <ul>
+       <li>唯一的忠告就是男士们奉劝你们一句，千万不要和女人一起去！</li>
+       <li>唯二的忠告是一定要租一个随身wifi，别指望在大街上抓到一个人问问他在哪里就能找到你要去的地方！韩国年轻人的英语实在是不怎么样！</li>
+      </ul>
+     </div>
+     <div class="trip-end"></div>
+    </div>
+   </div>
+   <script type="text/javascript">tripShow();</script>
+   <div class="content-placeholder clearfix"></div>
+  </div>
+  <div class="page-footer">
+   <a href="/">蝉游记首页</a>
+   <span>|</span>
+   <a href="/home/app">App下载</a>
+  </div>
+  <div class="download-guide" id="download-guide">
+   <div class="ico"></div>
+   <p>下载“蝉游记”App，解锁全部功能</p>
+   <a class="dl" href="/home/app/inspiration">下载</a>
+   <a class="cl" href="#">取消</a>
+  </div>
+  <div class="app-banner" id="app-banner">
+   <div class="slogan"></div>
+   <div class="dl"></div>
+   <a href="/home/app/inspiration"></a>
+   <div class="close"></div>
+  </div>
+ </body>
+</html>
