@@ -46,7 +46,6 @@ public class URLSelectThread extends Thread{
                     //判断是否已经遍历过
                     continue;
                 }
-//                System.out.println(url);
                 visitedURL.add(url);
                 //网址入队列，表示已经遍历
             try {

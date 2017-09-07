@@ -48,7 +48,7 @@ public class URLHandleThread extends Thread {
                 document = Jsoup.connect(url).timeout(5000).get();
                 //连接网址，获取网页（源代码）
                 sum++;
-                System.out.println(sum);
+                System.out.println("共爬取了 "+sum+" 篇游记");
 //                System.out.println("get");
 //                System.out.println(document);
 //                //验证爬取的网页是否为所要的
@@ -90,7 +90,6 @@ public class URLHandleThread extends Thread {
                 element = elements.get(0);
                 date = element.text();
                 System.out.println(date);
-                String titleImage;
                 //获取游记的时间
 
                 elements = document.select(".user-avatar");
@@ -117,8 +116,8 @@ public class URLHandleThread extends Thread {
                 elements = document.select(".trip-body");
                 element = elements.get(0);
                 //获取游记的主体
-                elements = element.select(".trip-day,.is-last,.clearfix,.trip-note");
-                for (int j = 1; j < elements.size(); j++) {
+                elements = element.select(".trip-note,.trip-day,.clearfix,.is-last");
+                for (int j = 0; j < elements.size(); j++) {
                     //处理所有主体的div
                     Elements es;
                     String imgurl;
@@ -131,15 +130,22 @@ public class URLHandleThread extends Thread {
                         text=es.get(es.size()-1).text();
                         xmlFileHandle.addNode("text",text);
                     } else if (Util.match("trip-day",classkind)) {
-                        System.out.println(2);
                         es = element.select("span");
-                        xmlFileHandle.addNode("text",es.get(0).text(),"text",es.get(1).text());
-                    } else if(Util.match("trip-note",classkind)){
+                        if(es.size()==1){
+                            xmlFileHandle.addNode("text",es.get(0).text());
+                        }else {
+                            xmlFileHandle.addNode("text",es.get(0).text(),"text",es.get(1).text());
+                        }
+                    } else if(Util.match("trip-note",classkind)||Util.match("trip-note is-last",classkind)){
                         es = element.select("*");
                         if(Util.match("note-text",es.get(2).attr("class"))){
                             //如果时单个文字段落，进行处理
                             es = es.get(2).select("p");
-                            xmlFileHandle.addNode("text",es.get(0).text());
+                            text = es.get(0).text();
+                            for(int k = 1;k < es.size(); k++){
+                                text = text + "<br>" + es.get(k).text();
+                            }
+                            xmlFileHandle.addNode("text",text);
                         } else {
                             //如果是图片，进行处理
                             es = es.get(2).select("*");
@@ -151,12 +157,9 @@ public class URLHandleThread extends Thread {
                             imgurl = imgurl.substring(imgurl.lastIndexOf("/")+1,imgurl.length());
                             if (es.get(0).select(".caption").size()==0) {
                                 //如果仅有一张图片
-                                System.out.println(6);
                                 xmlFileHandle.addNode("photo",imgurl);
                             } else if(es.get(0).select(".caption")!=null){
                                 //如果另外有文字
-                                System.out.println(7);
-                                System.out.println(es.get(0).select(".caption").get(0));
                                 text = es.get(0).select(".caption").get(0).text();
                                 xmlFileHandle.addNode("photo",imgurl,"text",text);
                             }
