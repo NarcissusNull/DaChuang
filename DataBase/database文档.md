@@ -5,6 +5,7 @@ _____________________________
 注意sql文件执行后会在数据库中生成一个新的名为travals的数据库，以Naivicat为例，当任选一个sql文件运行，会在数据库以外生成一个名为travals的数据库
 —————————————用户——————
 #—————————————————————
+##表
 ###用户资料user
 *  用户编号 userID varchar(20)*因为是无意义的随机储存的数目，且范围远超2^10，因而用varchar*
 * 昵称 nickname varchar(10)
@@ -27,27 +28,43 @@ _____________________________
 * 景点名称name varchar(20)
 * 景区编号 sceneid  varchar(20)外键连接scenen.scenenid
 #-------------------------
+###浏览记录browsehistory
+* 相应用户名称 userid(10)
+* 浏览文件编号 textid(10)
+#--------------------------
 ###历史纪录 history
 * 用户编号 userid int（10）=user.userid(外键)
 * 最近浏览景点=spot.id int (20)
 * 最近浏览景区=spot.sceneidint(20)
 #-------------------------
-###文件信息
+###文件信息 notes
 * 文件编号（graphID）varchar 20
-* 名称（name）varchar20
-* 修改时间(changetime)
-* 上传时间(uploadtime)
+* 内容1 游记文本信息(content)
+* 内容2 评论信息(comment)text
+* 名字(monicker)varchar40
+* 上传时间(uploadtime)varchar20
+* 修改时间(changetim)varchar20
 * 上传者（author）=user.userid
-* 内容1String
-* 内容2String
+* 修改者列表(changer) text
 #-------------------------
-###路径设计
+###路径设计 line
+* spotid1 外键，与spot表的spotid
+* spotid2外键，与spot表的spotid
+* sceneid外键与scenen的scenenId
+#-------------------------
+###浏览记录browsehistory
+* userid int用户记录，
+* textid int 用户浏览的文件记录
 >以下均为主键
 * 景点
 *   前驱景点
 * 所在景区
 -------------------------------------------------------
-##JDBC0.1文档简洁
+##视图
+###recorder
+* userid与user表的useid相对应
+* textid与browsehistory的textid对应
+##JDBC0.1文档
 > 每个包内包含了相应的sql语句用以实现相应的功能
 ###connect
 * 连接类Connect包
@@ -76,7 +93,9 @@ _____________________________
      *   NotesDao类  
 *select搜索功能*
           > public static List<Notes> selectall() 查询Notes表中所有信息，并返回一个线性表
-          > 
+      
+      * Dao类
+>   
         
 
 
