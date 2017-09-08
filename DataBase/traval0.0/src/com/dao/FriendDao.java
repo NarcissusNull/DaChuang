@@ -16,7 +16,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 public class FriendDao {//搜寻所有表内信息
-    public static List<Friend> selectall() throws SQLException {
+    public static List<Friend> selectAll() throws SQLException {
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
