@@ -69,6 +69,7 @@ _____________________________
 ###connect
 * 连接类Connect包
   > public static Connection getConnection()构建条件连接,
+  >public static void Changer(String name ,String pwd)更改数据库参数root与密码
 * vo包*USER表中基本元素与存取函数，结构相同，命名方式相似，故可大体介绍之*
    >private +表内元素，具体件上sql文件设计
   >Set+具体元素，设置改变元素

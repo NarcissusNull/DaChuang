@@ -16,7 +16,31 @@ import java.util.List;
  */
 public class Test {
     public static void main(String[] args) throws SQLException {
-/**
+        /**  DBAconnect.Change("root","625676");
+        Connection conn= DBAconnect.getConnection();
+        if(conn!=null)
+        {
+            System.out.println("连接成功");
+        }
+        else
+        {
+            System.out.println("连接失败");
+        }
+     List<String >list=new ArrayList<>();
+        //list=UserDao.selectAll();
+     list=UserDao.seLect("Nickname");
+     int a=list.size();
+       for(int i=0;i<a;i++){
+           System.out.println(list.get(i));
+       }
+       //  System.out.println(list.get(0).getNickname());
+      if( com.dao.UserDao.userExit("sdfsa","asdfasf"))
+           System.out.println("对应");
+        else
+            System.out.println("不对应");*/
+
+
+      /**
         Connection conn= DBAconnect.getConnection();
         if(conn!=null)
         {
@@ -112,11 +136,33 @@ public class Test {
         list3=RecordDao.select("TextID");
         ********************************************record视图操作语句测试**********************************************************************/
   /**   if(UserDao.userExit(4,"sdfsafsdfs"))
-         System.out.println("成功");
-     else
-         System.out.println("失败");
+   System.out.println("成功");
+   else
+   System.out.println("失败");
+   List<String> list=new ArrayList<>();
+   list=UserDao.seLect("Nickname");
    ************************************userdao判断用户是否存在，密码是否对的上*8***********************************************/
+/**
+     if(UserDao.userExit("dfds","sdfsafsdfs"))
+            System.out.println("成功");
+        else
+            System.out.println("失败");
+
+
+    }List<String> list=new ArrayList<>();
+        list=UserDao.seLect("Nickname");
+
+         *  if(UserDao.userExit("x",";kdsfjadfsda"))
+         System.out.println("成功");
+         else
+         System.out.println("失败");
+ ArrayList list=new ArrayList();
+ list=UserDao.selectOneInt("UserId");
+ int a=list.size();
+ for(int i=0;i<a;i++)
+ System.out.println(list.get(i));
+*/
+UserDao.userExit("asdfas","asdfasfasd");
+
     }
-
-
 }

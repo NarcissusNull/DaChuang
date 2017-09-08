@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: F:\程序\java\traval0.0
+Main-Class: com.test.Test
+

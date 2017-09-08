@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="traval0.0:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/traval0_0_jar</output-path>
+    <root id="root">
+      <element id="archive" name="traval0.0.jar">
+        <element id="module-output" name="traval0.0" />
+      </element>
+      <element id="library" level="project" name="lib" />
+    </root>
+  </artifact>
+</component>
