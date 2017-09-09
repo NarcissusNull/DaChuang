@@ -200,13 +200,6 @@ public class UserDao {//操作User类，对应表中的user表
         return list;
     }
 
-
-
-
-
-
-
-
     public static void  deLete(String condition)throws SQLException{
         Connection conn = null;
         PreparedStatement pstmt = null;

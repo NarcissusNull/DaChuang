@@ -21,7 +21,7 @@
       <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/test/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
+            <state relative-caret-position="170">
               <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -33,53 +33,43 @@
       <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="760">
+              <caret line="513" column="1" lean-forward="false" selection-start-line="513" selection-start-column="1" selection-end-line="513" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1504873233186" expanded="true" signature="948:966" ph="select * fro... User" />
-                <marker date="1504873233186" expanded="true" signature="2420:2451" ph="select missi... User" />
-                <marker date="1504873233186" expanded="true" signature="4453:4484" ph="select missi... User" />
-                <marker date="1504873233186" expanded="true" signature="6381:6419" ph="select missi... User" />
-                <marker date="1504873233186" expanded="true" signature="8116:8139" ph="delete from " />
-                <marker date="1504873233186" expanded="true" signature="8879:8940" ph="update User " />
-                <marker date="1504873233186" expanded="true" signature="9694:9753" ph="update User " />
-                <marker date="1504873233186" expanded="true" signature="10558:10657" ph="insert into User... " />
-                <marker date="1504873233186" expanded="true" signature="12020:12106" ph="insert into User... " />
-                <marker date="1504873233186" expanded="true" signature="14388:14413" ph="select Nickn... User" />
-                <marker date="1504873233186" expanded="true" signature="14851:14905" ph="select passw... User" />
-                <marker date="1504873233186" expanded="true" signature="17622:17681" ph="update User " />
-                <marker date="1504873233186" expanded="true" signature="18335:18397" ph="update User " />
+                <marker date="1504883154578" expanded="true" signature="948:966" ph="select * fro... User" />
+                <marker date="1504883154578" expanded="true" signature="2420:2451" ph="select missi... User" />
+                <marker date="1504883154578" expanded="true" signature="4453:4484" ph="select missi... User" />
+                <marker date="1504883154578" expanded="true" signature="6381:6419" ph="select missi... User" />
+                <marker date="1504883154578" expanded="true" signature="8109:8132" ph="delete from " />
+                <marker date="1504883154578" expanded="true" signature="8872:8933" ph="update User " />
+                <marker date="1504883154578" expanded="true" signature="9687:9746" ph="update User " />
+                <marker date="1504883154578" expanded="true" signature="10551:10650" ph="insert into User... " />
+                <marker date="1504883154578" expanded="true" signature="12013:12099" ph="insert into User... " />
+                <marker date="1504883154578" expanded="true" signature="14381:14406" ph="select Nickn... User" />
+                <marker date="1504883154578" expanded="true" signature="14844:14898" ph="select passw... User" />
+                <marker date="1504883154578" expanded="true" signature="17615:17674" ph="update User " />
+                <marker date="1504883154578" expanded="true" signature="18328:18390" ph="update User " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBAconnect.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/connect/DBAconnect.java">
+      <file leaf-file-name="traval0_0_jar.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/artifacts/traval0_0_jar.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MANIFEST.MF" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.idea/META-INF/MANIFEST.MF">
+      <file leaf-file-name="travalunfinished.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/artifacts/travalunfinished.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LineDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/dao/LineDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -101,6 +91,16 @@
                 <marker date="1504882241371" expanded="true" signature="6225:6282" ph="update frien... " />
                 <marker date="1504882241371" expanded="true" signature="6857:6934" ph="update frien... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DBAconnect.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/connect/DBAconnect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="454">
+              <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -144,10 +144,10 @@
         <option value="$PROJECT_DIR$/src/com/dao/NotesDao.java" />
         <option value="$PROJECT_DIR$/src/com/dao/SceneDao.java" />
         <option value="$PROJECT_DIR$/src/com/connect/DBAconnect.java" />
-        <option value="$PROJECT_DIR$/src/com/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/com/test/Test.java" />
         <option value="$PROJECT_DIR$/.idea/META-INF/MANIFEST.MF" />
         <option value="$PROJECT_DIR$/src/com/dao/FriendDao.java" />
+        <option value="$PROJECT_DIR$/src/com/dao/UserDao.java" />
       </list>
     </option>
   </component>
@@ -159,8 +159,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1378" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectView">
@@ -178,8 +177,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -265,6 +262,10 @@
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysql-connector-java-5.1.42-bin.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -298,9 +299,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="traval0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="traval0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="traval0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="traval0.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artifacts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -872,20 +911,20 @@
       <workItem from="1504866728354" duration="2664000" />
       <workItem from="1504869610895" duration="1899000" />
       <workItem from="1504873525728" duration="5502000" />
+      <workItem from="1504882741593" duration="1848000" />
+      <workItem from="1504917528096" duration="69000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80883000" />
+    <option name="totallyTimeSpent" value="82800000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="0" width="1378" height="744" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -897,7 +936,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15373352" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15271659" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -909,6 +948,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -930,20 +970,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/dao/FriendDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3819">
-          <caret line="209" column="93" lean-forward="false" selection-start-line="209" selection-start-column="93" selection-end-line="209" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/vo/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -1255,7 +1281,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/test/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
+        <state relative-caret-position="170">
           <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1267,30 +1293,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="31" lean-forward="false" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="760">
+          <caret line="513" column="1" lean-forward="false" selection-start-line="513" selection-start-column="1" selection-end-line="513" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1504873233186" expanded="true" signature="948:966" ph="select * fro... User" />
-            <marker date="1504873233186" expanded="true" signature="2420:2451" ph="select missi... User" />
-            <marker date="1504873233186" expanded="true" signature="4453:4484" ph="select missi... User" />
-            <marker date="1504873233186" expanded="true" signature="6381:6419" ph="select missi... User" />
-            <marker date="1504873233186" expanded="true" signature="8116:8139" ph="delete from " />
-            <marker date="1504873233186" expanded="true" signature="8879:8940" ph="update User " />
-            <marker date="1504873233186" expanded="true" signature="9694:9753" ph="update User " />
-            <marker date="1504873233186" expanded="true" signature="10558:10657" ph="insert into User... " />
-            <marker date="1504873233186" expanded="true" signature="12020:12106" ph="insert into User... " />
-            <marker date="1504873233186" expanded="true" signature="14388:14413" ph="select Nickn... User" />
-            <marker date="1504873233186" expanded="true" signature="14851:14905" ph="select passw... User" />
-            <marker date="1504873233186" expanded="true" signature="17622:17681" ph="update User " />
-            <marker date="1504873233186" expanded="true" signature="18335:18397" ph="update User " />
+            <marker date="1504883154578" expanded="true" signature="948:966" ph="select * fro... User" />
+            <marker date="1504883154578" expanded="true" signature="2420:2451" ph="select missi... User" />
+            <marker date="1504883154578" expanded="true" signature="4453:4484" ph="select missi... User" />
+            <marker date="1504883154578" expanded="true" signature="6381:6419" ph="select missi... User" />
+            <marker date="1504883154578" expanded="true" signature="8109:8132" ph="delete from " />
+            <marker date="1504883154578" expanded="true" signature="8872:8933" ph="update User " />
+            <marker date="1504883154578" expanded="true" signature="9687:9746" ph="update User " />
+            <marker date="1504883154578" expanded="true" signature="10551:10650" ph="insert into User... " />
+            <marker date="1504883154578" expanded="true" signature="12013:12099" ph="insert into User... " />
+            <marker date="1504883154578" expanded="true" signature="14381:14406" ph="select Nickn... User" />
+            <marker date="1504883154578" expanded="true" signature="14844:14898" ph="select passw... User" />
+            <marker date="1504883154578" expanded="true" signature="17615:17674" ph="update User " />
+            <marker date="1504883154578" expanded="true" signature="18328:18390" ph="update User " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/artifacts/traval0_0_jar.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/artifacts/travalunfinished.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1314,16 +1362,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/connect/DBAconnect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="454">
+          <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
           <folding />
         </state>
       </provider>
