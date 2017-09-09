@@ -12,5 +12,9 @@
   </head>
   <body>
   $END$
+  <p><% out.print(session.getAttribute("user"));%></p>
+  <form action="login.jsp">
+    <input type="submit" value="登录">
+  </form>
   </body>
 </html>
