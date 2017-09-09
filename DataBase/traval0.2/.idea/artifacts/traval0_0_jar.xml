@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="traval0.0:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/traval0_0_jar</output-path>
+    <root id="archive" name="traval0.0.jar">
+      <element id="module-output" name="traval0.0" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/mysql-connector-java-5.1.42-bin.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

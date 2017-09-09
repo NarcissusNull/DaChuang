@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html >
-<head>
-  <meta charset="UTF-8">
-  <title>登录失败</title>
-</head>
-<style type="text/css">
-      * {
+* {
   box-sizing: border-box;
 }
 
@@ -29,7 +22,7 @@ body {
    text-align: center;
 } 
 
-/*蝉游记三个字的样式*/
+/*字的样式*/
 .login-form-wrap h1 {
   margin: 0 0 50px 0;
   padding: 0;
@@ -64,17 +57,3 @@ body {
   padding-bottom: 7px;
   background: #C9C9C9;
 }
-
-</style>
-
-<body>
-  <section class="login-form-wrap">
-        <h1>不好意思,您登陆失败</h1>
-        <input type="submit" name="" value="重试"><!--返回登陆界面重新登陆-->
-        <input type="submit" name="" value="确定">
-        <!--返回未登录的网站首页，放弃重新登陆-->
-  </section>
-  
-  
-</body>
-</html>
